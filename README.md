@@ -106,9 +106,51 @@ Success!
 - [ ] Python code is idiomatic.
 - [ ] The application uses functions to organize code.
 
-### Complete and Continue
+## Approach
 
-- [ ] Submission process completed.
+### What are the steps?
+
+1. **Initialize a Global List**: This will store the plates. Each plate is represented by a positive integer indicating its size.
+2. **Define Functions**:
+   - `add_plate()`: Adds a new plate to the stack.
+   - `print_plates()`: Displays the current stack of plates.
+   - `remove_plates()`: Removes a specified number of plates from the stack.
+   - `main_menu()`: Provides the user interface for interacting with the program.
+3. **Implement the Main Loop**: This is where the program continuously prompts the user for their choice until they decide to exit.
+
+### What is the step sequence?
+
+1. Start the program.
+2. Display the main menu.
+3. Wait for the user's input.
+4. Based on the input, call the appropriate function (`add_plate`, `print_plates`, `remove_plates`).
+5. Repeat steps 2-4 until the user chooses to exit.
+
+### Which decisions need to be made?
+
+- **Input Validation**: Ensure that the user inputs are valid (e.g., positive integers for plate sizes and number of plates to remove).
+- **Stack Logic**: Decide whether a plate can be added based on its size relative to the plate currently on top of the stack.
+- **Removal Logic**: Determine if the requested number of plates can be removed based on the current stack size.
+
+### What repeats (loops)?
+
+- The **main menu loop** repeats, allowing the user to continuously choose actions until they decide to exit.
+- In `remove_plates`, a loop is used to remove multiple plates based on the user's input.
+
+### What data is needed?
+
+- **Plate Sizes**: Stored in the global list `plates`.
+- **User Input**: For adding or removing plates and for navigating the menu.
+
+### Which data types are appropriate?
+
+- **List**: To store the plates (integers).
+- **Integers**: For plate sizes and the number of plates to remove.
+- **Strings**: For user inputs, which are then converted to integers as needed.
+
+### Does creating a function simplify the problem?
+
+Absolutely. Functions like `add_plate`, `print_plates`, and `remove_plates` modularize the code, making it easier to understand and maintain. Each function handles a specific task, reducing complexity and improving readability. The `main_menu` function orchestrates the flow of the program, making the code more structured and manageable.
 
 ## Acknowledgments
 
